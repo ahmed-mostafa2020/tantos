@@ -5,7 +5,6 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 3000px;
 }
 
                                               /* start header */
@@ -170,15 +169,13 @@ box-shadow: 0 0 5px #eee;
 }
 .subscribe form{
   padding: 100px 0;
-
 }
 .subscribe input{
   width: 350px;
-  padding: 10px;
+  padding: 7px;
   border-radius: 7px;
   border: 1px solid black;
   outline: 1px solid white;
-  margin-bottom: 20px;  
 }
 .subscribe ::-webkit-input-placeholder{
   font-size: 14px;
@@ -190,30 +187,34 @@ box-shadow: 0 0 5px #eee;
   font-size: 14px;
   cursor: pointer;
   color: #fff;
-  padding: 10px;
+  padding: 7px;
   border: none;
-  text-transform: uppercase;
   box-shadow: 0 0 5px #eee;
-  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
   margin-left: 20px ;
 }
+.subscribe button:hover{
+  box-shadow: none;
+}
+
 
                                               /* end subscribe */
 
                                               /* start work */
 .work{
-  padding: 70px 0;
+  padding: 70px 0 0;
   text-align: center;
 }
-.work h2,.team h2 {
+.work h2,.team h2,.contact h2 {
   font-size: 35px;
   text-transform: uppercase;
   margin: 0;
 }
-.work h2 span,.team h2 span{
+.work h2 span,.team h2 span,.contact h2 span{
   color: rgb(239,99,22);
 }
-.work p, .team p{
+.work p, .team p,.contact p{
   width: 60%;
   margin: 15px auto 40px auto ;
   line-height: 1.7;
@@ -242,15 +243,15 @@ box-shadow: 0 0 5px #eee;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  padding: 15px 0;
   background-color: rgba(239,99,22,0.85) ;
   color: white;
   border-radius: 10px;
   padding: 0;
+  transition: all 0.3s linear ;
 }
 .work .card .over h4{
   font-weight: bold;
-  margin: 30px 0 0 0;
+  margin: 40px 0 0 0;
   text-transform: uppercase;
 
 }
@@ -261,7 +262,7 @@ box-shadow: 0 0 5px #eee;
 }
 .work .card .over button{
   width: 180px;
-  padding: 10px;
+  padding: 7px;
   background-color: transparent;
   border-radius: 10px ;
   border: 1px solid white;
@@ -269,7 +270,7 @@ box-shadow: 0 0 5px #eee;
   cursor: pointer;
   box-shadow: 0 0 5px #eee;
   transition: all 0.3s ease-in-out;
-  margin-top: 40px;
+  margin-top: 50px;
   text-transform: uppercase;
 }
 .work .card .over button:hover{
@@ -283,7 +284,7 @@ box-shadow: 0 0 5px #eee;
 .work button.show{
   text-transform: uppercase;
   width: 180px;
-  padding: 10px;
+  padding: 7px;
   background-color: transparent;
   border-radius: 10px ;
   margin-top: 20px ;
@@ -304,21 +305,46 @@ box-shadow: 0 0 5px #eee;
                                               /* end work */
 
                                               /* start testimonials */
+.testimonials{
+  background-image: url(imgs/header_stock.png);
+  text-align: center;
+  margin: 70px 0 0;
+}
+.testimonials .overlay{
+  background: rgba(25, 28, 32, 0.70);
+  width: 100%;
+  height: 100%;
+}
+.testimonials .carousel-inner .carousel-item {
+  padding: 50px 0;
+}
+.testimonials .carousel-inner .carousel-item img{
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 2px #e2e2e2;
+}
+@media (max-width: 576px) { 
+  .testimonials .carousel-inner .carousel-item h5{
+    width: 80%;
+  }
+ }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.testimonials .carousel-inner .carousel-item h5{
+  color: #fff;
+  line-height: 2;
+  font-style: italic;
+  margin: 0 auto;
+}
+.testimonials .carousel-inner .carousel-item .name{
+  line-height: 3;
+}
+.testimonials .icon a span:first-child .right,.left{
+  width: 35px;
+  height: 35px;
+}
+.testimonials .icon a span:first-child:hover{
+  color: rgb(239,99,22) ;
+}
 
 
                                               /* end testimonials */
@@ -328,11 +354,14 @@ box-shadow: 0 0 5px #eee;
   text-align: center;
   padding: 70px 0;
 }
-.team .person{
-  margin: 0 5px;
-  transition: all 0.3s ease-in-out;
+.team  p{
+  color: #757373;
 }
 
+.team .person{
+  margin: 0px 5px ;
+  transition: all 0.3s ease-in-out;
+}
 .team .person img{
   filter: gray;
   filter: grayscale(1);
@@ -393,3 +422,120 @@ box-shadow: 0 0 5px #eee;
 }
 
                                               /* end team */
+
+                                              /* start contact */
+.contact{
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+  background-image: url(imgs/city.png);
+  text-align: center;
+  color: #fff;
+}
+.contact .overlay{
+    background: rgba(49, 55, 61, .9);
+    width: 100%;
+    height: 100%;
+}
+.contact .container{
+  padding: 70px 0;
+}
+.contact h2{
+  margin-bottom: 25px;
+}
+.contact form input[type="text"],
+.contact form input[type="email"]
+{
+  width: 31.5%;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  margin: 15px 0 ;
+  outline: none;
+}
+
+.contact form input[type="text"]{
+  margin-right: 20px;
+}
+
+.contact form textarea{
+  width: 65.5%;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #CCC;
+  outline: none;
+  margin-bottom: 12px;
+}
+.contact .row button{
+  background-color: rgb(239,99,22);
+  width: 220px;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  padding: 7px;
+  border: none;
+  box-shadow: 0 0 5px #eee;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  margin-right: 130px;
+}
+.contact .row button:hover{
+  box-shadow: none;
+}
+
+.contact .row{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact .row .social ul{
+  margin: 0;
+}
+.contact .row .social ul li{
+  display: inline-block;
+  padding: 0 2px;
+}
+.contact .row .social ul .face{
+  color: #007bff;
+  background-color: #fff;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.contact .row .social ul .twitter{
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: rgb(28,156,234);
+  color: #fff;
+  border-radius: 50%;
+}
+.contact .row .social ul .google{
+  color: rgb(214,73,55);
+  background-color: #fff;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+                                              /* end contact */
+
+                                              /* start footer */
+footer{
+  background-color: rgb(49, 55, 61);
+  color: #fff;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+footer p{
+  margin: 0;
+}
+footer p:last-child{
+  margin-left: auto;
+}
+                                              /* end footer */

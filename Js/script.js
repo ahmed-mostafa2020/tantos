@@ -3,7 +3,7 @@
 $(function(){
     'use strict';
 
-    //trigger nice scroll
+    // trigger nice scroll
     // $('html').niceScroll();
 
     //change header height
